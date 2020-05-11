@@ -11,4 +11,5 @@ while True:
 	temp_f = temperature
 	hum_f = humidity
 	date = datetime.now()
-	result = firebase.post('/records', {'timestamp': date.isoformat(), 'temperature': temp_f, "humidity" : hum_f})
+	firebase.post('/records', {'timestamp': date.isoformat(), 'temperature': temp_f, "humidity" : hum_f})
+	sys.exit()
